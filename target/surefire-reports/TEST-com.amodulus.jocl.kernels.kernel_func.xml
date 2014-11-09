@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="2" time="0.89" errors="4" skipped="0" tests="6" name="com.amodulus.jocl.utils.JOCLHelperTest">
+<testsuite failures="0" time="0.6" errors="0" skipped="0" tests="1" name="com.amodulus.jocl.kernels.kernel_func">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_10\jre\bin"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
-    <property name="test" value="com.amodulus.jocl.utils.JOCLHelperTest"/>
+    <property name="test" value="com.amodulus.jocl.kernels.kernel_func"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Administrator\Documents\GitHub\aModulus"/>
     <property name="java.runtime.version" value="1.7.0_10-b18"/>
@@ -34,6 +34,8 @@
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="6.1"/>
+    <property name="jpda.listen" value="true"/>
+    <property name="jpda.address" value="56982"/>
     <property name="user.home" value="C:\Users\Administrator"/>
     <property name="user.timezone" value="America/New_York"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -41,10 +43,11 @@
     <property name="file.encoding" value="Cp1252"/>
     <property name="user.name" value="Administrator"/>
     <property name="java.class.path" value="C:\Program Files\NetBeans 7.2.1\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="maven.surefire.debug" value="-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=56982"/>
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_10\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.amodulus.jocl.utils.JOCLHelperTest test-compile surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.amodulus.jocl.kernels.kernel_func -DforkMode=once -Dmaven.surefire.debug=-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=56982 -Djpda.listen=true -Djpda.address=56982 test-compile surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -56,67 +59,11 @@
     <property name="maven.home" value="C:\Program Files\NetBeans 7.2.1\java\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="forkMode" value="once"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.044" classname="com.amodulus.jocl.utils.JOCLHelperTest" name="testAddVar">
-    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
-	at junit.framework.Assert.fail(Assert.java:47)
-	at com.amodulus.jocl.utils.JOCLHelperTest.testAddVar(JOCLHelperTest.java:46)
-</failure>
-    <system-out>addVar
-</system-out>
-  </testcase>
-  <testcase time="0.833" classname="com.amodulus.jocl.utils.JOCLHelperTest" name="testInitDevice">
-    <failure message="The test case is a prototype." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The test case is a prototype.
-	at junit.framework.Assert.fail(Assert.java:47)
-	at com.amodulus.jocl.utils.JOCLHelperTest.testInitDevice(JOCLHelperTest.java:32)
-</failure>
-    <system-out>initDevice
-CL_DEVICE_NAME: 			        Intel(R) Core(TM) i5-2500 CPU @ 3.30GHz
-CL_DEVICE_MAX_COMPUTE_UNITS:		4
-</system-out>
-  </testcase>
-  <testcase time="0.002" classname="com.amodulus.jocl.utils.JOCLHelperTest" name="testCreateKernel">
-    <error message="CL_INVALID_CONTEXT" type="org.jocl.CLException">org.jocl.CLException: CL_INVALID_CONTEXT
-	at org.jocl.CL.checkResult(CL.java:686)
-	at org.jocl.CL.clCreateProgramWithSource(CL.java:8485)
-	at com.amodulus.jocl.utils.JOCLHelper.createKernel(JOCLHelper.java:93)
-	at com.amodulus.jocl.utils.JOCLHelperTest.testCreateKernel(JOCLHelperTest.java:57)
-</error>
-    <system-out>createKernel
-</system-out>
-  </testcase>
-  <testcase time="0.001" classname="com.amodulus.jocl.utils.JOCLHelperTest" name="testRunKernel">
-    <error message="CL_INVALID_COMMAND_QUEUE" type="org.jocl.CLException">org.jocl.CLException: CL_INVALID_COMMAND_QUEUE
-	at org.jocl.CL.checkResult(CL.java:686)
-	at org.jocl.CL.clEnqueueNDRangeKernel(CL.java:18456)
-	at com.amodulus.jocl.utils.JOCLHelper.runKernel(JOCLHelper.java:105)
-	at com.amodulus.jocl.utils.JOCLHelperTest.testRunKernel(JOCLHelperTest.java:68)
-</error>
-    <system-out>runKernel
-</system-out>
-  </testcase>
-  <testcase time="0" classname="com.amodulus.jocl.utils.JOCLHelperTest" name="testLoadOutput">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.amodulus.jocl.utils.JOCLHelper.loadOutput(JOCLHelper.java:110)
-	at com.amodulus.jocl.utils.JOCLHelperTest.testLoadOutput(JOCLHelperTest.java:82)
-</error>
-    <system-out>loadOutput
-</system-out>
-  </testcase>
-  <testcase time="0.001" classname="com.amodulus.jocl.utils.JOCLHelperTest" name="testReadEntireFile">
-    <error type="java.io.FileNotFoundException:">java.io.FileNotFoundException: 
-	at java.io.FileInputStream.open(Native Method)
-	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:138)
-	at java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:97)
-	at java.io.FileReader.&lt;init&gt;(FileReader.java:58)
-	at com.amodulus.jocl.utils.JOCLHelper.readEntireFile(JOCLHelper.java:123)
-	at com.amodulus.jocl.utils.JOCLHelperTest.testReadEntireFile(JOCLHelperTest.java:94)
-</error>
-    <system-out>readEntireFile
-</system-out>
-  </testcase>
+  <testcase time="0.591" classname="com.amodulus.jocl.kernels.kernel_func" name="testKernel"/>
 </testsuite>
