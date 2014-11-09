@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------
+Test set: com.amodulus.jocl.utils.JOCLHelperTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 4, Skipped: 0, Time elapsed: 1.622 sec <<< FAILURE!
+testAddVar(com.amodulus.jocl.utils.JOCLHelperTest)  Time elapsed: 0.046 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: The test case is a prototype.
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.amodulus.jocl.utils.JOCLHelperTest.testAddVar(JOCLHelperTest.java:38)
+testInitDevice(com.amodulus.jocl.utils.JOCLHelperTest)  Time elapsed: 1.56 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: The test case is a prototype.
+	at junit.framework.Assert.fail(Assert.java:47)
+	at com.amodulus.jocl.utils.JOCLHelperTest.testInitDevice(JOCLHelperTest.java:24)
+testCreateKernel(com.amodulus.jocl.utils.JOCLHelperTest)  Time elapsed: 0 sec  <<< ERROR!
+org.jocl.CLException: CL_INVALID_CONTEXT
+	at org.jocl.CL.checkResult(CL.java:686)
+	at org.jocl.CL.clCreateProgramWithSource(CL.java:8485)
+	at com.amodulus.jocl.utils.JOCLHelper.createKernel(JOCLHelper.java:93)
+	at com.amodulus.jocl.utils.JOCLHelperTest.testCreateKernel(JOCLHelperTest.java:49)
+testRunKernel(com.amodulus.jocl.utils.JOCLHelperTest)  Time elapsed: 0 sec  <<< ERROR!
+org.jocl.CLException: CL_INVALID_COMMAND_QUEUE
+	at org.jocl.CL.checkResult(CL.java:686)
+	at org.jocl.CL.clEnqueueNDRangeKernel(CL.java:18456)
+	at com.amodulus.jocl.utils.JOCLHelper.runKernel(JOCLHelper.java:105)
+	at com.amodulus.jocl.utils.JOCLHelperTest.testRunKernel(JOCLHelperTest.java:60)
+testLoadOutput(com.amodulus.jocl.utils.JOCLHelperTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.amodulus.jocl.utils.JOCLHelper.loadOutput(JOCLHelper.java:110)
+	at com.amodulus.jocl.utils.JOCLHelperTest.testLoadOutput(JOCLHelperTest.java:74)
+testReadEntireFile(com.amodulus.jocl.utils.JOCLHelperTest)  Time elapsed: 0 sec  <<< ERROR!
+java.io.FileNotFoundException: 
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:97)
+	at java.io.FileReader.<init>(FileReader.java:58)
+	at com.amodulus.jocl.utils.JOCLHelper.readEntireFile(JOCLHelper.java:123)
+	at com.amodulus.jocl.utils.JOCLHelperTest.testReadEntireFile(JOCLHelperTest.java:86)
