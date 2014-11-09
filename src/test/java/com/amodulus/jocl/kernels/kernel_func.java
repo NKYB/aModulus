@@ -36,15 +36,15 @@ public class kernel_func extends TestCase {
         String kernelName = "kernel_func";
         String programSourceFolder = "C:\\Users\\Administrator\\Documents\\GitHub\\aModulus\\src\\main\\java\\com\\amodulus\\jocl\\kernels\\";
         String programSource = JOCLHelper.readEntireFile(programSourceFolder + kernelName + ".cl");   
-        int platformIndex = 0;
-        int deviceIndex = 0;
+        int platformIndex = 1;
+        int deviceIndex = 1;
         
         int n = 10;
         float dstArray[] = new float[n];
         Pointer dst = Pointer.to(dstArray);
         
         JOCLHelper joclHelper = new JOCLHelper();
-        joclHelper.initDevice(1024,64,platformIndex,deviceIndex);
+        joclHelper.initDevice(256,64,platformIndex,deviceIndex);
         joclHelper.addVar(CL_MEM_READ_WRITE, Sizeof.cl_float * n, null);
         joclHelper.createKernel(kernelName, programSource);
         long startTime = System.currentTimeMillis();
@@ -54,7 +54,7 @@ public class kernel_func extends TestCase {
         long endTime = System.currentTimeMillis();
         
         System.out.print("GUID: " + dstArray[0]);
-        System.out.println(" time to run in secods: " + (endTime - startTime) );
+        System.out.println(" time to run in Millis: " + (endTime - startTime) );
         
         assertTrue( true );
     }
