@@ -1,0 +1,22 @@
+#surefire
+#Sun Nov 09 17:30:52 EST 2014
+testClassesDirectory=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus\\target\\test-classes
+forkMode=once
+classPathUrl.3=C\:\\Users\\Administrator\\.m2\\repository\\org\\jocl\\jocl\\0.1.9\\jocl-0.1.9.jar
+classPathUrl.2=C\:\\Users\\Administrator\\.m2\\repository\\junit\\junit\\3.8.1\\junit-3.8.1.jar
+useManifestOnlyJar=true
+classPathUrl.1=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus\\target\\classes
+classPathUrl.0=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus\\target\\test-classes
+reportsDirectory=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus\\target\\surefire-reports
+providerConfiguration=org.apache.maven.surefire.junit.JUnit3Provider
+testSuiteDefinitionTestSourceDirectory=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus\\src\\test\\java
+requestedTest=com.amodulus.jocl.kernels.kernel_func
+surefireClassPathUrl.1=C\:\\Users\\Administrator\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.10\\surefire-api-2.10.jar
+surefireClassPathUrl.0=C\:\\Users\\Administrator\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit3\\2.10\\surefire-junit3-2.10.jar
+runOrder=filesystem
+useSystemClassLoader=true
+isTrimStackTrace=true
+enableAssertions=true
+failIfNoTests=true
+includes0=**/com/amodulus/jocl/kernels/kernel_func.java
+childDelegation=false

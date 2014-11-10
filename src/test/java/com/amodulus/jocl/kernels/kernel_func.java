@@ -39,12 +39,13 @@ public class kernel_func extends TestCase {
         int platformIndex = 1;
         int deviceIndex = 1;
         
-        int n = 10;
-        float dstArray[] = new float[n];
+        int n = 2560;
+        int dstArray[] = new int[n];
         Pointer dst = Pointer.to(dstArray);
         
         JOCLHelper joclHelper = new JOCLHelper();
-        joclHelper.initDevice(256,64,platformIndex,deviceIndex);
+        joclHelper.initDevice(n,256,platformIndex,deviceIndex);
+//        joclHelper.initDevice(1,1,platformIndex,deviceIndex);
         joclHelper.addVar(CL_MEM_READ_WRITE, Sizeof.cl_float * n, null);
         joclHelper.createKernel(kernelName, programSource);
         long startTime = System.currentTimeMillis();
@@ -55,6 +56,9 @@ public class kernel_func extends TestCase {
         
         System.out.print("GUID: " + dstArray[0]);
         System.out.println(" time to run in Millis: " + (endTime - startTime) );
+//        for (int m=0; m < n; m++) {
+//            System.out.print(dstArray[m] + ",");
+//        }
         
         assertTrue( true );
     }

@@ -1,0 +1,10 @@
+#surefire
+#Sun Nov 09 17:30:52 EST 2014
+jpda.listen=true
+maven.surefire.debug=-Xdebug -Xrunjdwp\:transport\=dt_socket,server\=n,address\=52875
+user.dir=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus
+jpda.address=52875
+localRepository=C\:\\Users\\Administrator\\.m2\\repository
+forkMode=once
+basedir=C\:\\Users\\Administrator\\Documents\\GitHub\\aModulus
+test=com.amodulus.jocl.kernels.kernel_func
