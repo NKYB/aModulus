@@ -3,8 +3,8 @@ __kernel void kernel_func(
 {
     int gid = get_global_id(0);
     int total = 0;
-    for (int j=0; j < 100000000; j=j+1) {
-        for (int i=0; i < 100000000; i=i+1) {
+    for (int j=1; j < 11; j=j+1) {
+        for (int i=1; i < 11; i=i+1) {
             total = total + 1;
         }
     }
