@@ -45,4 +45,4 @@ Temporary Items
 .apdisk
 
 # matches 'target' in any sub folder
-target/
+*/target/**
