@@ -22,7 +22,7 @@ public class kernel_func extends TestCase {
         int platformIndex = 1;
         int deviceIndex = 1;
         
-        int n = 1;
+        int n = 2;
         int dstArray[] = new int[n];
         Pointer dst = Pointer.to(dstArray);
         
@@ -38,5 +38,6 @@ public class kernel_func extends TestCase {
         System.out.println("Time to run kernel in (millis): " + (endTime - startTime) );
 
         assertEquals(dstArray[0],100);
+        assertEquals(dstArray[1],100);
     }
 }
